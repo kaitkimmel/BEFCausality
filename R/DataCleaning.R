@@ -63,3 +63,37 @@ biomass_dat$Planted_MonoSp<- gsub(pattern = "AndropogonGerardi", replacement = "
 biomass_dat$Planted_MonoSp<- gsub(pattern = "SorghastrumNutans", replacement = "Sorghastrum nutans",biomass_dat$Planted_MonoSp)
 biomass_dat$Planted_MonoSp<- gsub(pattern = "Amorpha  canescens", replacement = "Amorpha canescens",biomass_dat$Planted_MonoSp)
 biomass_dat$Planted_MonoSp<- gsub(pattern = "Solidago sigida", replacement = "Solidago rigida",biomass_dat$Planted_MonoSp)
+
+
+#### Clean percent cover data ####
+names(cover_dat) <- c("Sample", "Month_Sampled", "Year", "Plot", "Ring", "CO2", "N", "SR_Planted", "FGR_Planted", "Experiment", "Planted_MonoSp", "Planted_MonoGroup", "H2O", "Temp", "Species", "Percent_Cover")
+
+
+### Clean up species names
+
+cover_dat$Species<- gsub(pattern = "Poa Pratensis", replacement = "Poa pratensis",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Micellaneous Litter", replacement = "Miscellaneous Litter",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "miscellaneous litter", replacement = "Miscellaneous Litter",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Miscellaneous Llitter", replacement = "Miscellaneous Litter",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "miscelaneous liter", replacement = "Miscellaneous Litter",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Bareground", replacement = "Bare ground",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Bare Ground", replacement = "Bare ground",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "16 species weed", replacement = "16 Species Weeds",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "16 Secies Weeds", replacement = "16 Species Weeds",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "16 species Weeds", replacement = "16 Species Weeds",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "16 Species weeds", replacement = "16 Species Weeds",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "16 Species Weedss", replacement = "16 Species Weeds",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Tragopogon dubius (major)", replacement = "Tragopogon dubius",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "moss", replacement = "Mosses & lichens",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Moss", replacement = "Mosses & lichens",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Mushrooms", replacement = "Fungi",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "mushrooms", replacement = "Fungi",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Mushroom", replacement = "Fungi",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Moss ", replacement = "Mosses & lichens",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Poa pratensis ", replacement = "Poa pratensis",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "amorpha canescens", replacement = "Amorpha canescens",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "schizachyrium scoparium", replacement = "Schizachyrium scoparium",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Real weeds", replacement = "Weeds",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Weeds ", replacement = "Weeds",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Mosses & lichens ", replacement = "Mosses & lichens",cover_dat$Species)
+cover_dat$Species<- gsub(pattern = "Mosses & lichenses & lichens", replacement = "Mosses & lichens",cover_dat$Species)
